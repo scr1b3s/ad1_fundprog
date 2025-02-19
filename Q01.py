@@ -10,11 +10,11 @@ def dna_analysis(s: str) -> str:
     not_dna = [i + 1 for i, l in enumerate(s) if l.upper() not in sequence]
     
     if len(not_dna) > 1:
-        return f"Sequência inválida, pois nas posições {not_dna} os elementos não possuem valores esperados."
+        return f"Sequência inválida, pois nas posições {not_dna} os elementos não possuem valores esperados"
     elif len(not_dna) == 1:
-        return f"Sequência inválida, pois na posição {not_dna[0]} o elemento não possui valor esperado."
+        return f"Sequência inválida, pois na posição {not_dna[0]} o elemento não possui valor esperado"
     else:
-        return "Sequência válida."
+        return "Sequência válida"
 
 if __name__ == '__main__':
     entries = dna_analysis('acgctasdagctwqa')
