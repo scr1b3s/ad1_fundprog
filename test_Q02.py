@@ -17,13 +17,13 @@ class TestDNAAnalysis(unittest.TestCase):
     def test_invalid_dna_sequence_single_error(self):
         self.assertEqual(
             dna_analysis("ACGTXCGT"),
-            "Sequência inválida, pois na posição 5 o elemento não possui valor esperado."
+            "Sequência inválida, pois na posição 5 o elemento não possui valor esperado"
         )
     
     def test_invalid_dna_sequence_multiple_errors(self):
         self.assertEqual(
             dna_analysis("ACGTXCGY"),
-            "Sequência inválida, pois nas posições [5, 8] os elementos não possuem valores esperados."
+            "Sequência inválida, pois nas posições [5, 8] os elementos não possuem valores esperados"
         )
     
     def test_empty_string(self):
