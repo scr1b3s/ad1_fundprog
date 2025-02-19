@@ -14,7 +14,7 @@ class TestDNAAnalysis(unittest.TestCase):
         self.assertEqual(dna_analysis("ACGTXCGT"), "Sequência inválida, pois na posição 5 o elemento não possui valor esperado")
     
     def test_empty_string(self):
-        self.assertEqual(dna_analysis(""), "Sequência válida")
+        self.assertIsNone(dna_analysis(''))
     
     def test_all_invalid_characters(self):
         self.assertEqual(dna_analysis("XYZ"), "Sequência inválida, pois nas posições [1, 2, 3] os elementos não possuem valores esperados")

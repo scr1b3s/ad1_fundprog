@@ -6,6 +6,9 @@ Saída: Se s é uma sequência de DNA, retorne ``sequência válida'', caso cont
 """
 
 def dna_analysis(s: str) -> str:
+    if not s:
+        return None
+    
     sequence = {'A', 'C', 'G', 'T'}
     invalid_positions = [i + 1 for i, nucleotide in enumerate(s) if nucleotide.upper() not in sequence]
     

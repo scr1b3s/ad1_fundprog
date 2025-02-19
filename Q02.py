@@ -7,6 +7,9 @@ Saída: Se s é uma sequência de DNA, retorne "sequência válida", juntamente 
 """
 
 def dna_analysis(s: str) -> str:
+    if not s:
+        return None
+    
     sequence = {'A', 'C', 'G', 'T'}
     not_dna = [i + 1 for i, l in enumerate(s) if l.upper() not in sequence]
     

@@ -27,11 +27,8 @@ class TestDNAAnalysis(unittest.TestCase):
         )
     
     def test_empty_string(self):
-        self.assertEqual(
-            dna_analysis(""),
-            "Sequência válida. Além disso, a contagem de cada base nitrogenada é: "
-        )
-    
+        self.assertIsNone(dna_analysis(''))
+
     def test_lowercase_dna_sequence(self):
         self.assertEqual(
             dna_analysis("acgtacgt"),
